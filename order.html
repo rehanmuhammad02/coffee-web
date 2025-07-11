@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Website</title>
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="coffee-web-logo.png">
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+  <!-- Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark px-4 py-3 shadow fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-warning" data-aos="zoom-in">Coffee House ☕</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#coffeeNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="coffeeNavbar">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <!-- Home -->
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle"role="button" data-bs-toggle="dropdown">
+              Coffee Types
+            </a>
+            <ul class="dropdown-menu bg-black">
+              <li><a class="dropdown-item" href="Espresso.html">Espresso</a></li>
+              <li><a class="dropdown-item" href="Latte.html">Latte</a></li>
+              <li><a class="dropdown-item" href="Cappuccino.html">Cappuccino</a></li>
+              <li><a class="dropdown-item" href="Mocha.html">Mocha</a></li>
+              <li><a class="dropdown-item" href="Cold Brew.html">Cold Brew</a></li>
+            </ul>
+          </li>
+          <!-- About & Contact -->
+          <li class="nav-item mx-2"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact</a></li>
+          <!-- Order Online -->
+          <li class="nav-item mx-2">
+            <a class="nav-link order-btn" href="order.html" data-aos="fade-up">Order Online</a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- AOS Animation JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, 
+    once: true      
+  });
+</script>
+<!-- Banner Section -->
+  <section class="banner d-flex align-items-center justify-content-center text-center text-white">
+    <div class="overlay"></div>
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-2" data-aos="zoom-in">Online Order</h1>
+      <p class="lead mb-4" data-aos="zoom-in">Place your favorite coffee, tea, or snack order with just a few clicks!</p>
+      <a href="#order-form" class="order-btn" data-aos="zoom-in">Place Order</a>
+    </div>
+  </section>
+
+  <!-- Order Form Section -->
+  <section id="order-form" class="order-section">
+    <div class="container">
+      <h2 data-aos="zoom-in">How to Order</h2>
+      <p data-aos="zoom-in">
+        Ordering from our Coffee House is simple and quick. Just fill in your name, contact number, and email address. Select your desired category — coffee, tea, or snacks — and send your order. We'll prepare it with love and deliver it hot and fresh. You can also pick it up in-store. Enjoy artisan blends, smooth flavors, and quick service — just how you love it!
+      </p>
+
+      <div class="row justify-content-center mt-4" data-aos="zoom-in">
+        <div class="col-md-6">
+          <form method="post" action="#">
+            <input type="text" class="form-control" name="name" placeholder="Your Name" required pattern="[A-Za-z ]{3,}" title="Only letters, minimum 3 characters">
+            <input type="text" class="form-control" name="contact" placeholder="Contact Number" required pattern="[0-9]{10,14}" title="Enter valid number (10–14 digits)">
+            <input type="email" class="form-control" name="email" placeholder="Email Address" required title="Enter a valid email address">
+
+            <select class="form-select" name="category" required>
+              <option value="">Select Category</option>
+              <option>Coffee</option>
+              <option>Tea</option>
+              <option>Snacks</option>
+            </select>
+
+            <button type="submit" class="btn submit-btn w-100 mt-2">Send Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+<!-- Footer Section -->
+ <!-- Footer Start -->
+<footer style="background: url('footer-1.jpg') center/cover no-repeat; color: #fff; padding: 60px 20px 30px;">
+  <div class="container">
+    <div class="row text-white">
+      
+      <!-- Get in Touch -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase mb-4" data-aos="zoom-in">Get In Touch</h5>
+        <p data-aos="zoom-in"><i class="fas fa-map-marker-alt me-2" data-aos="zoom-in"></i>123 Street, New York, USA</p>
+        <p data-aos="zoom-in"><i class="fas fa-phone me-2" data-aos="zoom-in"></i>+012 345 67890</p>
+        <p data-aos="zoom-in"><i class="fas fa-envelope me-2" data-aos="zoom-in"></i>info@example.com</p>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase mb-4" data-aos="zoom-in">Follow Us</h5>
+        <p data-aos="zoom-in">Amet elit vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+        <div class="d-flex mt-3">
+          <a href="#" class="btn btn-outline-light btn-social me-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="btn btn-outline-light btn-social me-2"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="btn btn-outline-light btn-social me-2"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="btn btn-outline-light btn-social"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Open Hours -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase mb-4" data-aos="zoom-in">Open Hours</h5>
+        <p data-aos="zoom-in"><strong>Monday - Friday:</strong><br>8.00 AM - 8.00 PM</p>
+        <p data-aos="zoom-in"><strong>Saturday - Sunday:</strong><br>2.00 PM - 8.00 PM</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase mb-4" data-aos="zoom-in">Newsletter</h5>
+        <p data-aos="zoom-in">Amet elit vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Your Email" required>
+          <button class="btn btn-warning">Sign</button>
+        </form>
+      </div>
+    </div>
+
+    <hr class="border-top border-light my-4">
+
+    <div class="text-center">
+      <p class="mb-1">&copy; <strong>Domain</strong>. All Rights Reserved.</p>
+      <p class="small">Designed by <strong>HTML Codex</strong> | Distributed by <strong>ThemeWagon</strong></p>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+  <!-- 📱 Fixed WhatsApp + Back to Top -->
+  <div class="fixed-icons">
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <a href="https://wa.me/1234567890" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</body>
+</html>

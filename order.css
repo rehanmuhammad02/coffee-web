@@ -1,0 +1,157 @@
+/* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f3f0;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: #3e2723;
+    }
+    .navbar-brand, .nav-link, .dropdown-item {
+      color: #fff !important;
+    }
+    .nav-link:hover, .dropdown-item:hover {
+      color: brown !important;
+    }
+    .nav-item {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .navbar-brand {
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+    .order-btn {
+      background-color: #ff5722;
+      color: white !important;
+      border-radius: 30px;
+      padding: 6px 20px;
+      transition: 0.3s;
+    }
+    .order-btn:hover {
+      background-color: #ffc107;
+      color: black !important;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+     /* Banner Section */
+    .banner {
+      background: url('banner-10.jpg') no-repeat center center/cover;
+      height: 500px;
+      position: relative;
+    }
+    .banner .overlay {
+      background-color: rgba(62, 39, 35, 0.85);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .banner .container {
+      position: relative;
+      z-index: 2;
+    }
+    .order-btn {
+      background-color: #ff5722;
+      color: white !important;
+      border-radius: 30px;
+      padding: 10px 30px;
+      transition: 0.3s;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .order-btn:hover {
+      background-color: #ffc107;
+      color: black !important;
+    }
+    /* Order Section */
+    .order-section {
+      background-color: #3e2723;
+      padding: 60px 20px;
+      color: white;
+    }
+    .order-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #ffc107;
+    }
+    .order-section p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .form-control, .form-select {
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+    .submit-btn {
+      background-color: #ff5722;
+      color: white !important;
+      border-radius: 30px;
+      padding: 10px 25px;
+      transition: 0.3s;
+    }
+    .submit-btn:hover {
+      background-color: #ffc107;
+      color: black !important;
+    }
+      /* footer section */
+      .btn-social {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    }
+  .btn-social:hover {
+    background-color: #ff8800;
+    color: white;
+    border-color: #ff8800;
+     }
+    /* ==== Fixed Icons ==== */
+    .fixed-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 999;
+    }
+    .fixed-icons a {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #3e2723;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 20px;
+      border: 2px solid #d2b48c;
+      text-decoration: none;
+    }
+    .fixed-icons a.whatsapp {
+      background-color: #25D366;
+      color: white;
+    }
+    .fixed-icons a:hover {
+      background-color: #6d4c41;
+    }
